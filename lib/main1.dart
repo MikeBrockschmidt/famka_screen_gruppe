@@ -73,7 +73,7 @@ class CustomScreen extends StatelessWidget {
               border: Border(
                 top: BorderSide(
                   color: Colors.black,
-                  width: 0.5,
+                  width: 1.0,
                 ),
               ),
             ),
@@ -93,6 +93,10 @@ class CustomScreen extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
                     child: const Icon(
                       Icons.add,
                       color: Color.fromARGB(255, 0, 0, 0),
@@ -125,23 +129,23 @@ class CustomScreen extends StatelessWidget {
             ),
           ),
           Container(
-            height: 120,
+            height: 140,
             width: double.infinity,
-            color: const Color.fromARGB(255, 255, 255, 255),
+            color: Colors.red,
             child: Column(
               children: [
                 Expanded(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: List.generate(8, (index) {
+                      children: List.generate(6, (index) {
                         return buildRoundButtonContainer();
                       }),
                     ),
                   ),
                 ),
                 Container(
-                  height: 0.5,
+                  height: 1,
                   width: double.infinity,
                   color: Colors.black,
                 ),
@@ -151,7 +155,10 @@ class CustomScreen extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Color.fromARGB(255, 182, 67, 67),
+                border: Border(
+                  top: BorderSide(color: Colors.black, width: 1),
+                ),
               ),
               child: Row(
                 children: [
@@ -227,7 +234,7 @@ class CustomScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 255, 255, 255),
+        color: Colors.white,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
@@ -243,8 +250,8 @@ class CustomScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               border: Border.all(
-                color: const Color.fromARGB(255, 39, 60, 69),
-                width: 6,
+                color: Colors.white,
+                width: 2,
               ),
             ),
           ),
@@ -265,7 +272,8 @@ class CustomScreen extends StatelessWidget {
   Widget buildRoundButtonContainer() {
     return Container(
       margin: const EdgeInsets.only(left: 1),
-      padding: const EdgeInsets.all(2),
+      color: Colors.white,
+      padding: const EdgeInsets.all(16),
       child: buildRoundButton(),
     );
   }
