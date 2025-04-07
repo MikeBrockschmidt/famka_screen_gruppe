@@ -55,7 +55,7 @@ class CustomScreen extends StatelessWidget {
           Container(
             height: 240,
             width: double.infinity,
-            color: const Color.fromARGB(255, 255, 255, 255),
+            color: Colors.white,
             child: Center(
               child: Image.asset(
                 'lib/assets/images/rahmen1.png',
@@ -69,15 +69,15 @@ class CustomScreen extends StatelessWidget {
             height: 60,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
+              color: Colors.white,
               border: Border(
                 top: BorderSide(
                   color: Colors.black,
-                  width: 1.0,
+                  width: 0.5,
                 ),
               ),
             ),
-            padding: const EdgeInsets.only(left: 30, right: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -86,21 +86,14 @@ class CustomScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                    color: Colors.black,
                   ),
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: const Icon(
-                      Icons.add,
-                      color: Color.fromARGB(255, 0, 0, 0),
-                    ),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.black,
                   ),
                 ),
               ],
@@ -109,19 +102,19 @@ class CustomScreen extends StatelessWidget {
           Container(
             height: 40,
             width: double.infinity,
-            color: const Color.fromARGB(255, 255, 255, 255),
+            color: Colors.white,
             padding: const EdgeInsets.only(left: 30),
             child: Row(
               children: const [
                 Icon(
                   Icons.home,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Colors.black,
                 ),
                 SizedBox(width: 8),
                 Text(
                   'Standort',
                   style: TextStyle(
-                    color: Color.fromARGB(255, 0, 0, 0),
+                    color: Colors.black,
                     fontSize: 18,
                   ),
                 ),
@@ -129,23 +122,26 @@ class CustomScreen extends StatelessWidget {
             ),
           ),
           Container(
-            height: 140,
+            height: 120,
             width: double.infinity,
-            color: Colors.red,
+            color: Colors.white,
             child: Column(
               children: [
                 Expanded(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: List.generate(6, (index) {
-                        return buildRoundButtonContainer();
-                      }),
+                      children: [
+                        const SizedBox(width: 16),
+                        ...List.generate(8, (index) {
+                          return buildLayeredCircleButton();
+                        }),
+                      ],
                     ),
                   ),
                 ),
                 Container(
-                  height: 1,
+                  height: 0.5,
                   width: double.infinity,
                   color: Colors.black,
                 ),
@@ -154,12 +150,7 @@ class CustomScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 182, 67, 67),
-                border: Border(
-                  top: BorderSide(color: Colors.black, width: 1),
-                ),
-              ),
+              color: Colors.white,
               child: Row(
                 children: [
                   Container(
@@ -176,9 +167,9 @@ class CustomScreen extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.all(26),
                         child: Text(
-                          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+                          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: Colors.black,
                             fontSize: 16,
                           ),
                         ),
@@ -230,51 +221,61 @@ class CustomScreen extends StatelessWidget {
     );
   }
 
-  Widget buildRoundButton() {
+  Widget buildLayeredCircleButton() {
     return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-      ),
+      margin: const EdgeInsets.symmetric(horizontal: 2),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: const DecorationImage(
-                image: AssetImage('lib/assets/images/test_button.jpg'),
-                fit: BoxFit.cover,
-              ),
-              border: Border.all(
-                color: Colors.white,
-                width: 2,
-              ),
+          SizedBox(
+            width: 80,
+            height: 80,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                // Äußerster Kreis (grün)
+                Container(
+                  width: 70,
+                  height: 70,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 39, 60, 69),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                // Mittlerer Kreis (blau)
+                Container(
+                  width: 58,
+                  height: 58,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                // Innerster Kreis (mit Bild)
+                Container(
+                  width: 54,
+                  height: 54,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('lib/assets/images/test_button.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 1),
           const Text(
             'Vorname',
             style: TextStyle(
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildRoundButtonContainer() {
-    return Container(
-      margin: const EdgeInsets.only(left: 1),
-      color: Colors.white,
-      padding: const EdgeInsets.all(16),
-      child: buildRoundButton(),
     );
   }
 }
