@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_erster_screen/profil_imgage_vorname.dart';
+import 'package:projekt_erster_screen/widgets/profil_imgage_vorname.dart';
 
 void main() {
   runApp(const MainApp());
