@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projekt_erster_screen/profil_imgage_vorname.dart';
 
 void main() {
   runApp(const MainApp());
@@ -29,7 +30,7 @@ class CustomScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // ------------------Gruppenrahmen
+          // ------------------Gruppen
           Container(
             height: 90,
             width: double.infinity,
@@ -45,7 +46,7 @@ class CustomScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             padding: const EdgeInsets.only(left: 30),
             child: const Text(
-              'Gruppe',
+              'Grupe',
               style: TextStyle(
                 fontSize: 61,
                 fontWeight: FontWeight.w900,
@@ -143,222 +144,11 @@ class CustomScreen extends StatelessWidget {
                       children: [
                         const SizedBox(width: 30),
                         ProfilImgageVorname(),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 2),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: 80,
-                                height: 80,
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: const BoxDecoration(
-                                        color: Color.fromARGB(255, 39, 60, 69),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 58,
-                                      height: 58,
-                                      decoration: const BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 54,
-                                      height: 54,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                              'lib/assets/images/test_button.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 1),
-                              const Text(
-                                'Vorname',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 2),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: 80,
-                                height: 80,
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: const BoxDecoration(
-                                        color: Color.fromARGB(255, 39, 60, 69),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 58,
-                                      height: 58,
-                                      decoration: const BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 54,
-                                      height: 54,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                              'lib/assets/images/test_button.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 1),
-                              const Text(
-                                'Vorname',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 2),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: 80,
-                                height: 80,
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: const BoxDecoration(
-                                        color: Color.fromARGB(255, 39, 60, 69),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 58,
-                                      height: 58,
-                                      decoration: const BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 54,
-                                      height: 54,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                              'lib/assets/images/test_button.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 1),
-                              const Text(
-                                'Vorname',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 2),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: 80,
-                                height: 80,
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: const BoxDecoration(
-                                        color: Color.fromARGB(255, 39, 60, 69),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 58,
-                                      height: 58,
-                                      decoration: const BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 54,
-                                      height: 54,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                              'lib/assets/images/test_button.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 1),
-                              const Text(
-                                'Vorname',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        ProfilImgageVorname(),
+                        ProfilImgageVorname(),
+                        ProfilImgageVorname(),
+                        ProfilImgageVorname(),
+                        ProfilImgageVorname(),
                       ],
                     ),
                   ),
@@ -444,68 +234,6 @@ class CustomScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ProfilImgageVorname extends StatelessWidget {
-  const ProfilImgageVorname({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 2),
-      child: Column(
-        children: [
-          SizedBox(
-            width: 80,
-            height: 80,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  width: 70,
-                  height: 70,
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 39, 60, 69),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                Container(
-                  width: 58,
-                  height: 58,
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                Container(
-                  width: 54,
-                  height: 54,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('lib/assets/images/test_button.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 1),
-          const Text(
-            'Vorname',
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-          ),
-        ],
       ),
     );
   }
